@@ -85,33 +85,31 @@ export default function Navbar() {
         }`}
       >
         <div className="flex h-20 items-center justify-between px-6">
-          <Image
-            src="/logo/ember-oak-logo.png"
-            alt="Ember & Oak"
-            width={220}
-            height={70}
-            className="h-auto w-[165px]"
-          />
+          <a href="#home" onClick={() => setOpen(false)}>
+            <span className="font-heading text-xl tracking-[0.22em] text-white">
+              EMBER <span className="text-[#C7A66A]">&</span> OAK
+            </span>
+          </a>
 
           <button
             onClick={() => setOpen(false)}
             aria-label="Close menu"
             className="text-white"
           >
-            <X />
+            <X size={28} />
           </button>
         </div>
 
         <div className="flex h-[calc(100vh-80px)] flex-col justify-center px-6">
-          <div className="space-y-8">
+          <div className="space-y-6">
             {navItems.map((item, index) => (
               <a
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block font-heading text-5xl font-light text-white transition hover:text-[#C7A66A]"
+                className="block font-heading text-4xl font-light text-white transition hover:text-[#C7A66A]"
               >
-                <span className="mr-4 text-sm text-[#C7A66A]">
+                <span className="mr-4 text-xs text-[#C7A66A]">
                   0{index + 1}
                 </span>
                 {item.label}
@@ -122,7 +120,7 @@ export default function Navbar() {
           <a
             href="#reservation"
             onClick={() => setOpen(false)}
-            className="mt-12 inline-flex w-fit rounded-full bg-[#C7A66A] px-8 py-4 text-xs font-bold uppercase tracking-[0.25em] text-[#111111]"
+            className="mt-10 inline-flex w-fit rounded-full bg-[#C7A66A] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.25em] text-[#111111]"
           >
             Reserve a Table
           </a>
