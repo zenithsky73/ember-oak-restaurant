@@ -86,9 +86,14 @@ export default function Navbar() {
       >
         <div className="flex h-20 items-center justify-between px-6">
           <a href="#home" onClick={() => setOpen(false)}>
-            <span className="font-heading text-xl tracking-[0.22em] text-white">
-              EMBER <span className="text-[#C7A66A]">&</span> OAK
-            </span>
+            <Image
+              src="/logo/ember-oak-logo-v2.png"
+              alt="Ember & Oak"
+              width={220}
+              height={70}
+              priority
+              className="h-auto w-[200px]"
+            />
           </a>
 
           <button
@@ -100,8 +105,8 @@ export default function Navbar() {
           </button>
         </div>
 
-        <div className="flex h-[calc(100vh-80px)] flex-col justify-center px-6">
-          <div className="space-y-6">
+        <div className="flex h-[calc(100vh-80px)] flex-col px-8 pt-16 pb-10">
+          <div className="space-y-5">
             {navItems.map((item, index) => (
               <a
                 key={item.label}
@@ -120,7 +125,7 @@ export default function Navbar() {
           <a
             href="#reservation"
             onClick={() => setOpen(false)}
-            className="mt-10 inline-flex w-fit rounded-full bg-[#C7A66A] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.25em] text-[#111111]"
+            className="mt-auto inline-flex w-fit rounded-full bg-[#C7A66A] px-7 py-4 text-[11px] font-bold uppercase tracking-[0.25em] text-[#111111]"
           >
             Reserve a Table
           </a>

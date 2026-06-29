@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Button from "@/components/Button";
 
@@ -36,8 +37,8 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/45 to-[#111111]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,.78)_76%)]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/50 to-[#111111]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,.8)_76%)]" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,.75)_0%,transparent_24%,transparent_76%,rgba(0,0,0,.75)_100%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[url('/noise.svg')] opacity-[0.035]" />
 
@@ -49,38 +50,39 @@ export default function Hero() {
       />
 
       <div className="relative z-20 mx-auto max-w-[1500px] px-6 text-center">
+
         <motion.p
           initial={{ opacity: 0, y: 26 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.1 }}
-          className="mb-10 text-[11px] font-bold uppercase tracking-[0.7em] text-[#C7A66A]"
+          transition={{ duration: 0.85, delay: 0.2 }}
+          className="mb-8 text-[10px] font-bold uppercase tracking-[0.65em] text-[#C7A66A] md:text-[11px]"
         >
-          Crafted by Fire.
+          Crafted by Fire
         </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 44 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.05, delay: 0.28 }}
-          className="font-heading text-[30px] font-light leading-none tracking-[0.09em] sm:text-[72px] md:text-[118px] md:tracking-[0.12em] xl:text-[100px]"
+          transition={{ duration: 1.05, delay: 0.38 }}
+          className="font-heading text-[46px] font-light leading-none tracking-[0.08em] sm:text-[60px] md:text-[90px] md:tracking-[0.11em] xl:text-[120px]"
         >
           EMBER <span className="text-[#C7A66A]">&</span> OAK
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 26 }}
+        <motion.h3
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.52 }}
-          className="mt-10 text-[11px] font-bold uppercase tracking-[0.7em] text-white/70"
+          transition={{ duration: 0.85, delay: 0.58 }}
+          className="mt-6 text-xs font-semibold uppercase tracking-[0.45em] text-[#C7A66A] md:text-sm"
         >
           Served with Soul.
-        </motion.p>
+        </motion.h3>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.85, delay: 0.78 }}
-          className="mt-12"
+          transition={{ duration: 0.85, delay: 0.9 }}
+          className="mt-10"
         >
           <Button href="#reservation">Reserve a Table</Button>
         </motion.div>
